@@ -1,7 +1,7 @@
 /***********************************
 
 Use: "Hello World".encrypt
-	 ""
+	 "Hello World".encrypt.decrypt
 
 ***********************************/
 import Foundation
