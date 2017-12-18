@@ -1,3 +1,9 @@
+/***********************************
+
+Use: "Hello World".encrypt
+	 ""
+
+***********************************/
 import Foundation
 
 extension String {
