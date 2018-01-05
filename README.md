@@ -2,14 +2,20 @@
 
 ## History and usage
 
-The *ATBASH cipher* is a monoalphabetic substitution cipher. It was originally used to encode the Hebrew alphabet. 
+The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest that have been used. It was originally used to encode the Hebrew alphabet. The cipher encrypts a message without any key, using the affine function f(x) = |1x - 25|. 
 
 ## Detailed Explanations : How it works?
 
-1. Firstly, 
-2. Then, 
-3. Therefore, 
-4. Finally 
+1. Firstly, each character of the initial text (message to encrypt) is converted in a number from 0 to 25, corresponding to its position in the Latin alphabet which contains 26 letters --> (a = 0, b = 1 ... z = 25 ).
+
+2. Then, each number obtained is transformed by an affine function (|1x - 25|). "x" is representing the number.
+
+3. If we take all the images and put them in a list, we obtain n numbers corresponding to n charcaters of the initial text. The next step consists in finding the values of mudulo 26 of each number. (Modulo means remainder)
+> Example : Modulo 4 of 19 is 3 because 15 = 4 * 4 + 3 In the other hand, modulo 26 of 26 is 0 because 26 = 26 * 1 + 0
+
+4. Therefore, we cobtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
+
+5. We finally create the final message by putting all the letters side by side.
 
 | A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
@@ -21,25 +27,17 @@ The *ATBASH cipher* is a monoalphabetic substitution cipher. It was originally u
 
 ## Weaknesses
 
-- As 
+- As the cipher doesn't use any key and the encryption algorithm is known to all, if the attacker knows that the message has been encrypted using ATBASH, he can simply break the message.
 
-- We can also use 
-
-Image centered : 
+- We can also use **frequency analysis** to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are :
 
 <p align="center"> 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/English_letter_frequency_%28alphabetic%29.svg/340px-English_letter_frequency_%28alphabetic%29.svg.png">
 </p>
 
-- Other possibilities include
-
-- Knowing 
-
 ## Example
 
-(Write all steps)
+### Encrypting
 
-- 
-- 
-- 
-- 
+### Decrypting
+
