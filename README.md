@@ -62,7 +62,25 @@ The final message is **25 6 6 25 23 15** and using the tables again, we convert 
 
 > **ZGGZXP**
 
-**ATTACK** is encrypted with the function **f(x) = 1x + 13** and becomes **ZGGZXP**.
+**ATTACK** is encrypted with the function **f(x) = |1x - 25|** and becomes **ZGGZXP**.
 
 ### Decrypting
+
+- Message to decrypt : **ZGGZXP**
+
+- The function used is the same for encrypting/decrypting : **f(x) = |1x - 25|**
+- Using the above tables, **ZGGZXP** can be written as : **25 6 6 25 23 15**
+
+Images of each number :
+
+- f(25) = 0
+- f(6) = 19
+- f(23) = 2
+- f(15) = 18
+
+The final message is **0 19 19 0 2 10** and using the tables again, we convert them in the encrypted message :
+
+> **ATTACK**
+
+**ZGGZXP** is decrypted with the function **f(x) = |1x - 25|** and becomes **ATTACK**.
 
