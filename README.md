@@ -2,7 +2,7 @@
 
 ## History and usage
 
-The *ATBASH cipher* is 
+The *ATBASH cipher* is a monoalphabetic substitution cipher. It was originally used to encode the Hebrew alphabet. 
 
 ## Detailed Explanations : How it works?
 
@@ -10,8 +10,6 @@ The *ATBASH cipher* is
 2. Then, 
 3. Therefore, 
 4. Finally 
-
-tables : 
 
 | A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
