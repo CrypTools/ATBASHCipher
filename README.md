@@ -2,7 +2,7 @@
 
 ## History and usage
 
-The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest that have been used. It was originally used to encode the Hebrew alphabet. The cipher encrypts a message without any key, using the affine function f(x) = |1x - 25|. This can be represented with simple tables :
+The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest that have been used. It was originally used to encode the Hebrew alphabet. The cipher encrypts a message without any key, using the affine function **f(x) = |1x - 25|**. This can be represented with simple tables :
 
 | a  | b  | c  | d  | e  | f  | g  | h  | i  | j  | k  | l  | m  |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|
@@ -18,12 +18,11 @@ The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest
 
 2. Then, each number obtained is transformed by an affine function (|1x - 25|). "x" is representing the number.
 
-3. If we take all the images and put them in a list, we obtain n numbers corresponding to n charcaters of the initial text. The next step consists in finding the values of mudulo 26 of each number. (Modulo means remainder)
-> Example : Modulo 4 of 19 is 3 because 15 = 4 * 4 + 3 In the other hand, modulo 26 of 26 is 0 because 26 = 26 * 1 + 0
+3. Therefore, we cobtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
 
-4. Therefore, we cobtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
+4. We finally create the final message by putting all the letters side by side.
 
-5. We finally create the final message by putting all the letters side by side.
+Steps 1 and 3 can be done with these tables : 
 
 | A | B | C | D | E | F | G | H | I | J | K  | L  | M  |
 |---|---|---|---|---|---|---|---|---|---|----|----|----|
@@ -35,7 +34,7 @@ The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest
 
 ## Weaknesses
 
-- As the cipher doesn't use any key and the encryption algorithm is known to all, if the attacker knows that the message has been encrypted using ATBASH, he can simply break the message.
+- As the cipher doesn't use any key and the encryption algorithm is known to all (same for encrypting and decrypting), if the attacker knows that the message has been encrypted using ATBASH, he can simply break the message.
 
 - We can also use **frequency analysis** to decrypt the message as each letter is encrypted with the same algorithm and the most common letters in english are :
 
@@ -47,11 +46,23 @@ The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest
 
 ### Encrypting
 
-- Message to encrypt : ATTACK
+- Message to encrypt : **ATTACK**
 
-- The function used to encrypt the message is : **f(x) = |1x - 25|**
+- The function used is the same for encrypting/decrypting : **f(x) = |1x - 25|**
+- Using the above tables, **ATTACK** can be written as : **0 19 19 0 2 10**
 
-- Using the above tables, ATTACK can be written as : **0 19 19 0 2 10**
+Images of each number :
+
+- f(0) = 25
+- f(19) = 6
+- f(2) = 23
+- f(10) = 15
+
+The final message is **25 6 6 25 23 15** and using the tables again, we convert them in the encrypted message :
+
+> **ZGGZXP**
+
+**ATTACK** is encrypted with the function **1x + 13** and becomes **ZGGZXP**.
 
 ### Decrypting
 
