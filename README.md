@@ -2,7 +2,15 @@
 
 ## History and usage
 
-The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest that have been used. It was originally used to encode the Hebrew alphabet. The cipher encrypts a message without any key, using the affine function f(x) = |1x - 25|. 
+The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest that have been used. It was originally used to encode the Hebrew alphabet. The cipher encrypts a message without any key, using the affine function f(x) = |1x - 25|. This can be represented with simple tables :
+
+| a  | b  | c  | d  | e  | f  | g  | h  | i  | j  | k  | l  | m  |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| 25 | 24 | 23 | 22 | 21 | 20 | 19 | 18 | 17 | 16 | 15 | 14 | 13 |
+
+| n  | o  | p  | q | r | s | t | u | v | w | x | y | z |
+|----|----|----|---|---|---|---|---|---|---|---|---|---|
+| 12 | 11 | 10 | 9 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 
 ## Detailed Explanations : How it works?
 
@@ -38,6 +46,12 @@ The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest
 ## Example
 
 ### Encrypting
+
+- Message to encrypt : ATTACK
+
+- The function used to encrypt the message is : **f(x) = |1x - 25|**
+
+- Using the above tables, ATTACK can be written as : **0 19 19 0 2 10**
 
 ### Decrypting
 
