@@ -62,7 +62,7 @@ The final message is **25 6 6 25 23 15** and using the tables again, we convert 
 
 > **ZGGZXP**
 
-**ATTACK** is encrypted with the function **1x + 13** and becomes **ZGGZXP**.
+**ATTACK** is encrypted with the function **f(x) = 1x + 13** and becomes **ZGGZXP**.
 
 ### Decrypting
 
