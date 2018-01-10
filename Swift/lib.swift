@@ -15,7 +15,7 @@ extension String {
             if let index = alphabet.index(of: String(i).lowercased()) {
                 indexed = index;
             }
-            output += alphabet[26 - indexed]
+            output += alphabet[25 - indexed]
         }
         return output
     }
