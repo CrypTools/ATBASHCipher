@@ -18,7 +18,7 @@ The *ATBASH cipher* is a monoalphabetic substitution cipher, one of the earliest
 
 2. Then, each number obtained is transformed by an affine function (f(x) = |1x - 25|). "x" is representing the number.
 
-3. Therefore, we cobtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
+3. Therefore, we obtain a new list with n element, each between 0 and 25 both included. All these numbers are converted in letters of the Latin Alphabet using the tables below.
 
 4. We finally create the final message by putting all the letters side by side.
 
