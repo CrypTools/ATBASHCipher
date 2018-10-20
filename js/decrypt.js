@@ -1,9 +1,27 @@
+/* ==========================================================================
+ *
+ *    Use:
+ *    'Svool Dliow!'.decrypt()
+ *    => 'Hello World'
+ *
+ * ========================================================================== */
+
 String.prototype.decrypt = function() {
-	const alphabet = 'abcdefghijklmnopqrstuvwxyz '.split('')
 	let output = ""
-	for (let i of this) {
-		output += alphabet[25 - alphabet.indexOf(i.toLowerCase())]
-	}
-	return output;
+    let alphabet = {}
+
+    const chr = x => String.fromCharCode(x)
+
+    for (let i = 0; i < 26; i++) {
+        alphabet[chr(65 + i)] = chr(90 - i)
+        alphabet[chr(97 + i)] = chr(122 - i)
+    }
+
+    for (let char of this) {
+        if (char in alphabet) output += alphabet[char]
+        else output += char
+    }
+
+	return output
 }
 module.exports = text => text.decrypt()
