@@ -1,18 +1,24 @@
-def decrypt(initial):
-  """ Use : decrypt("nvhhztv")
-  => 'message'
-  """
-  initial = initial.lower()
-  mylist = []
+# ==============================================================================
+#
+#     Use:
+#     decrypt("Svool Dliow!")
+#     => "Hello World!"
+#
+# ==============================================================================
 
-  for char in initial:
-    mylist.append(ord(char) - 97)
-  
-  output = ""
-  alphabet = dict(zip(range(0, 26), string.ascii_lowercase))
-  
-  for char in mylist:
-    image = str(alphabet[25 - char])
-    output += image
-  
-  return output
+def decrypt(initial):
+
+    output = ""
+    alphabet = {}
+
+    for i in range(26):
+        alphabet[chr(65+i)] = chr(90 - i)
+        alphabet[chr(97+i)] = chr(122 - i)
+
+    for char in initial:
+        if char in alphabet:
+            output += alphabet[char]
+        else:
+            output += char
+
+return output
