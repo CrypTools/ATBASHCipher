@@ -12,6 +12,6 @@ eye.test("Encryption", "node",
 )
 eye.test("Decryption", "node",
 	$ => $(decrypt("zggzxp")).Equal("attack"),
-	$ => $(decrypt(encrypt("attack"))).Equal("attack")
+	$ => $(decrypt(encrypt("attack"))).Equal("attack"),
 	$ => $(decrypt(encrypt("More complex"))).Equal("More complex")
 )
