@@ -51,11 +51,13 @@ C R Y P T O
 
 ## Implementations
 
-|    Language    |            Encrypt             |            Decrypt             |
-|----------------|--------------------------------|--------------------------------|
-|   Javascript   |  [encrypt.js](js/encrypt.js)   |  [decrypt.js](js/decrypt.js)   |
-|   Python       | [encrypt.py](py/encrypt-v2.py) | [decrypt.py](py/decrypt-v2.py) |
-|   Swift        |  [lib.swift](swift/lib.swift)  |  [lib.swift](swift/lib.swift)  |
+|    Language    |              Encrypt               |              Decrypt               |
+|----------------|------------------------------------|------------------------------------|
+|   C            |  [ATBASHCipher.c](c/ATBASHCipher.c)|  [ATBASHCipher.c](c/ATBASHCipher.c)|
+|   C++          |  [main.cpp](cpp/main.cpp)          |  [main.cpp](cpp/main.cpp)          |
+|   Javascript   |  [encrypt.js](js/encrypt.js)       |  [decrypt.js](js/decrypt.js)       |
+|   Python       |  [encrypt.py](py/encrypt-v2.py)    |  [decrypt.py](py/decrypt-v2.py)    |
+|   Swift        |  [lib.swift](swift/lib.swift)      |  [lib.swift](swift/lib.swift)      |
 
 ## Running the tests
 
