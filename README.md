@@ -11,6 +11,7 @@
 </p>
 
 A simple linear cipher originally used on the Hebrew alphabet.
+Atbash is considered a special case of Affine Cipher, a monoalphabetic substitution cipher.
 
 ## How it works
 
